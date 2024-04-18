@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+		<h1>Resize</h1>
+		
+		<div class="row">
+
+			<div class="column" style="background-color:mediumpurple; color:lightblue;">
+				<h2>Column 1</h2>
+			</div>
+
+			<div class="column" style="background-color:lightblue; color:mediumpurple;">
+				<h2>Column 2</h2>
+			</div>
+		</div>
+
+		<style>
+			body {
+				background-color: purple;
+				color: black;
+				font-size: 100px;
+			}
+			
+			.row {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+			}
+
+			/* On screens that are 992px wide or less, the background color is medium purple */
+			@media screen and (max-width: 992px) {
+				body {
+					background-color: mediumpurple;
+					color: white;
+					font-size: 50px;
+				}
+			
+				.row {
+					display: table;
+					float: left;
+				}	
+			}
+
+			/* On screens that are 600px wide or less, the background color is pink */
+			@media screen and (max-width: 600px) {
+				body {
+					background-color: pink;
+					color: white;
+					font-size: 25px;
+				}
+
+				.row {
+					display: table;
+					float: left;
+				}	
+			}
+		</style>
+	</body>
+</html>
